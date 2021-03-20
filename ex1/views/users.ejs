@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+    <h1>
+      <%= title %>
+    </h1>
+    <div id="msg">
+      <%= msg %>
+    </div><br />
+    <button id="btnBack" type="button" onclick="javascript:location.replace('/');">Back</button>
+
+    <form id="formUpdateUser" name="updateuser1" method="post" action="/users/updateuser">
+
+      <lable for="inputUserName">User Name :</lable>
+      <input id="inputUserName" type="text" placeholder="username" name="username" value="<%= userDetail.username %>" />
+      <br />
+      <lable for="inputUserEmail">User Email :</lable>
+      <input id="inputUserEmail" type="text" placeholder="email" name="useremail" value="<%= userDetail.email %>" />
+      <input id="inputUserEmail" type="hidden" placeholder="id" name="id" value="<%= userDetail._id %>" />
+
+        <button id="btnSubmit" type="submit">Submit</button>&nbsp;<button id="btnBack" type="button"
+          onclick="javascript:location.replace('/');">Back</button>
+    </form>
+    <!-- /WRAPPER -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+      });
+    </script>
+</body>
+
+</html>

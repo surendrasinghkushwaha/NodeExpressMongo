@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+    <div id="userInfo">
+      <h2> User Info</h2><a href="/newuser">Add New User</a>&nbsp; <a href="/userlist">User List</a>&nbsp;<a href="/fileuploads">file uploads</a>&nbsp; <a href="/">Back</a>
+      <p>
+        <strong> Name: </strong><span id='userInfoName'></span>
+        <br />
+        <strong> Age: </strong> <span id='userInfoAge'></span>
+        <br />
+        <strong> Gender: </strong> <span id='userInfoGender'></span>
+        <br />
+        <strong> Location: </strong> <span id='userInfoLocation'></span>
+      </p>
+    </div>
+    <!-- USER LIST -->
+    <h2>User List</h2>
+    <div id="userList">
+      <table>
+        <thead>
+          <th>UserName</th>
+          <th>Email</th>
+          <th>Delete?</th>
+          <th>Update</th>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <!-- /USER LIST --> 
+     
+  </div>
+  <!-- /WRAPPER -->
+  <script type="text/javascript" src="/javascripts/global.js"></script>
+   
+    
+</body>
+
+</html>

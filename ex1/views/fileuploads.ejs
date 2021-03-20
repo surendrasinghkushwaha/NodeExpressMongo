@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>File Upload</h1>&nbsp; <a href="/">Back</a>
+    <table><tr><th>uploaded file</th><th>server file name</th><th>mime type</th><th>size</th><th>error</th></tr>
+      <%
+        var list = '';
+        for (i = 0; i < filelist.length; i++) {
+          list += '<tr><td>' + filelist[i].name + '</td><td>'+filelist[i].targetfilename +'</td><td>'+filelist[i].mimetype+'</td><td>' + filelist[i].size + ' </td><td>' + filelist[i].error + ' </td></tr>';
+        }
+      %>
+      <%- list %>
+    </table >
+    <div id="msg">
+      <%= msg %>
+    </div><br />
+    <!-- WRAPPER -->
+  <div id="wrapper">
+    <form action="/fileuploads/upload" method="POST" enctype="multipart/form-data">
+        
+        <input type="file" name="files" multiple />
+        <input type='submit' value='upload!' />
+    </form>
+     
+  </div>
+  <!-- /WRAPPER -->
+  </body>
+</html>
